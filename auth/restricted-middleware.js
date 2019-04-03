@@ -12,6 +12,7 @@ module.exports = (req, res, next) => {
           message: 'Invalid Credentials'
         }) 
       } else {
+        req.decodedJwt = decodedToken
         next()
       }
     })
